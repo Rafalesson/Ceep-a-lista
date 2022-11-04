@@ -1,0 +1,154 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b2027;
+  font-family: "BioRhyme", serif;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(246, 241, 209, .5);
+}
+
+.title{
+  color: #f6f1d1;
+  font-size: 2rem;
+}
+
+.todo-list {
+  width: 100%;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #f6f1d1;
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.form-input::placeholder{
+  color: rgba(11, 32, 39, .25);
+}
+
+.form-button {
+  border: 1px solid #0b2027;
+  width: 100%;
+  margin: 0 auto;
+  color: #0b2027;
+  background: #f6f1d1;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: 5px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.form-button:hover {
+  color: #f6f1d1;
+  background: rgba(246, 241, 209, 0.1);
+}
+
+.container{
+  margin: 0 2rem;
+}
+
+
+.task {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f6f1d1;
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.check-button,
+.delete-button {
+  background-color: #f6f1d1;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.task.done .check-button {
+  background-color: #46494c;
+  color: #f6f1d1;
+}
+
+.check-icon {
+  display: block;
+  padding: 1px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.task.done .check-icon {
+  background-color: #0b2027;
+}
+
+.content {
+  margin: 0;
+}
+
+.task.done .content {
+  text-decoration: line-through;
+}
+
+
+@media screen and (min-width: 768px) {
+  .form {
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .form-button{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 2.6rem;
+    margin-left: 1rem;
+    width: 40%;
+  }
+
+  .task{
+    width: 60%;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form {
+    width: 40%;
+  }
+
+  .task{
+    width: 40%;
+    margin: 1rem auto;
+  }
+}
