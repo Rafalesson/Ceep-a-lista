@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="assets/js/listaTarefas.js" defer></script>
     <title>Ceep</title>
   </head>
   <body>
@@ -22,24 +23,14 @@
       </header>
       <!--fim do cabecalho-->
 
-      <section class="todo-list">
+      <section class="todo-list ">
         <form class="form container" action="">
-          <input class="form-input" type="text" placeholder="Digite um item: "/>
-          <button class="form-button">Novo Item</button>
+          <input class="form-input" type="text" placeholder="Digite um item:" data-form-input/>
+          <button class="form-button" data-form-button>Novo Item</button>
         </form>
 
-        <ul class="list container">
-          <li class="task">
-            <p class="content">
-              Comprar pão
-            </p>
-          </li>
-
-          <li class="task">
-            <p class="content">
-              Comprar queijo
-            </p>
-          </li>
+        <ul class="list container" data-list>
+     
         </ul>
       </section>
       <!--fim do todo-list-->
